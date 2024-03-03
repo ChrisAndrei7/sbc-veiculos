@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "e9fa077f-5c6b-4932-be61-30584f1f086a",
+		"name": "TechChallengeApp",
+		"description": "Projeto criado para atender a demanda de uma lanchonete através de um sistema de autoatendimento.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33097875",
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-e9fa077f-5c6b-4932-be61-30584f1f086a?action=share&source=collection_link&creator=33097875"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Consultar usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/users",
+						"description": "API para consultar usuarios cadastrados, não é necessário informar nada no body."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ch teste b\",\r\n    \"email\": \"b@b.com.br\",\r\n    \"cpf\": \"222222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/users/create",
+						"description": "API para cadastrar novos usuários, necessário informar os 3 dados abaixo:\n\n- nome\n- email\n- cpf"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar usuarios",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2\",\r\n    \"name\": \"ch teste alterado ff\",\r\n    \"email\": \"ab@ba.com.br\",\r\n    \"cpf\": \"222222222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/users/update/1",
+						"description": "API para atualizar usuários cadastrados, necessário informar os 4 dados abaixo:\n\n- id\n- nome\n- email\n- cpf"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/users/delete/1",
+						"description": "API para deletar um usuário cadastrado, necessário informar o id do usuário no endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar usuario pelo ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/users/read/1",
+						"description": "API para consultar usuarios cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar usuario pelo CPF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/users/readcpf/222222",
+						"description": "API para consultar usuarios cadastrados, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
+					},
+					"response": []
+				}
+			],
+			"description": "APIs relacionadas aos usuários com acesso a aplicação."
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Consultar produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/produtos",
+						"description": "API para consultar produtos cadastrados, não é necessário informar nada no body."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Batata frita pequena\",\r\n        \"descricao\": \"Batata frita\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/produtos/create",
+						"description": "API para criar novos produtos. Necessário informar os 5 campos abaixo:\n\n- nome\n- descricao\n- ingredientes\n- categoria\n- preco"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produtos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n        \"nome\": \"Batata frita pequena\",\r\n        \"descricao\": \"Batata frita\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/produtos/update/2",
+						"description": "API para atualização de produtos cadastrados, necessário informar os 6 dados abaixo:\n\n- id\n- nome\n- descricao\n- ingredientes\n- categoria\n- preco"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/produtos/delete/2",
+						"description": "API para deletar um produto cadastrado, necessário informar o id do produto no endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar produto pelo ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/produtos/read/1",
+						"description": "API para consultar produtos cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar categorias dos produtos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/produtos/readcategoria/Lanches",
+						"description": "API para consultar categorias cadastradas para os produtos. Necessário informar o nome da categoria no final do endpoint."
+					},
+					"response": []
+				}
+			],
+			"description": "APIs relacionadas aos produtos pertencentes a lanchonete."
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Consultar pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/pedidos",
+						"description": "API para consultar pedidos cadastrados, não é necessário informar nada no body."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"quantidade\": \"1\",\r\n        \"pruduto_id\": \"1\",\r\n        \"cliente_id\": \"1\",\r\n        \"descricao\": \"lanche completo\",\r\n        \"status\": \"Recebido\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/pedidos/create",
+						"description": "API para criar novos produtos. Necessário informar os 5 campos abaixo:\n\n- quantidade\n- pruduto_id\n    \n- cliente_id\n- descricao\n- status"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"quantidade\": 1,\r\n    \"pruduto_id\": 1,\r\n    \"cliente_id\": 1,\r\n    \"descricao\": \"lanche completo\",\r\n    \"status\": \"EM_PREPARACAO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/pedidos/update/1",
+						"description": "API para atualização do pedido, necessário informar os 6 dados abaixo:\n\n- id\n    \n- quantidade\n    \n- pruduto_id\n    \n- cliente_id\n    \n- descricao\n    \n- status"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/pedidos/delete/2",
+						"description": "API para deletar um pedido. Necessário informar o id no final do endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pedido pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/pedidos/read/1",
+						"description": "API para consultar pedidos cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pedido por status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/pedidos/readporstatus/Recebido",
+						"description": "API para consultar pedidos por status. Necessário informar o status no final do endpoint para retornar pedidos."
+					},
+					"response": []
+				}
+			],
+			"description": "APIs relacionadas aos pedidos criados para a lanchonete."
+		}
+	]
+}
