@@ -17,4 +17,4 @@ COPY project .
 EXPOSE 8000
 
 # entrypoint to run the django.sh file
-ENTRYPOINT ["./django.sh"]
+ENTRYPOINT ["bash", "-e", "./django.sh"]
