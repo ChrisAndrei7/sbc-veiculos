@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Creating Migrations..."
-python manage.py makemigrations
+python manage.py makemigrations pagamentos
 echo ====================================
 
 echo "Starting Migrations..."
