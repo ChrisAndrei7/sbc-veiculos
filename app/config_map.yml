@@ -4,20 +4,17 @@ metadata:
   name: app-variables
 data:
   #env variables for the postgres component
-  POSTGRES_USER: 'postgres'
-  POSTGRES_DB: 'postgres'
+  POSTGRES_USER: postgres
+  POSTGRES_DB: postgres
 
   #env variables for the backend component
   DJANGO_ENV: 'development'
   DEBUG: "1"
   SECRET_KEY: 'django-insecure-e7im26dbj!(m-)^a3#z5&5d($lrk3h+&)ckuk*&gw$@pzp!g8v'
-  DJANGO_ALLOWED_HOSTS: "*"
-  DJANGO_ADMIN_USER: 'admin'
-  DJANGO_ADMIN_EMAIL: "admin@example.com"
 
-  DATABASE: 'postgres'
+  DATABASE: postgres
   DB_ENGINE: "django.db.backends.postgresql"
-  DB_NAME: 'app'
-  DB_USER: 'postgres'
-  DB_HOST: 'postgres-cluster-ip-service'
+  PG_DB: postgres
+  PG_USER: postgres
+  PG_HOST: postgres-service
   DB_PORT: "5432"

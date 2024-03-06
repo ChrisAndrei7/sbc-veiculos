@@ -9,7 +9,7 @@ metadata:
   labels:
     app: django-postgre
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: django-postgre
@@ -19,11 +19,10 @@ spec:
         app: django-postgre
     spec:
       containers:
-      - name: django-postgre
+      - name: django-app
         image: app-djangoapp:latest
-        #image: django-postgresql
-        #imagePullPolicy: IfNotPresent
-        command: ["python","./manage.py", "runserver", "0.0.0.0:8000"]
+        imagePullPolicy: Never
+        command: ["bash", "-e", "./django.sh"]
         ports:
         - containerPort: 8000
         env:
@@ -31,23 +30,27 @@ spec:
           valueFrom:
             secretKeyRef:
               name: postgres-credentials
-              key: user
+              key: POSTGRES_USER
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
               name: postgres-credentials
-              key: password
-        - name: POSTGRES_DB
+              key: POSTGRES_PASSWORD
+        - name: PG_DB
           valueFrom:
             configMapKeyRef:
               name: app-variables
-              key: POSTGRES_DB
-        - name: DB_HOST
+              key: PG_DB
+        - name: PG_HOST
           valueFrom:
             configMapKeyRef:
               name: app-variables
-              key: DB_HOST
-
+              key: PG_HOST
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: app-variables
+              key: DB_PORT
     #     volumeMounts:
     #        - name: postgres-volume-mount
     #          mountPath: /var/lib/busybox
@@ -64,7 +67,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: django-cluster-ip-service
+  name: django-service
 spec:
   type: NodePort
   selector:

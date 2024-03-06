@@ -9,7 +9,7 @@ spec:
       - name: django-job-container
         image: django-postgresql
         imagePullPolicy: IfNotPresent
-        command: ["python","./manage.py", "migrate"]
+        command: ["bash", "-e", "./django.sh"]
         env:
         - name: POSTGRES_USER
           valueFrom:
