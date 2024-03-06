@@ -3,6 +3,10 @@ echo "Creating Migrations..."
 python manage.py makemigrations pagamentos
 echo ====================================
 
+echo "Creating Migrations..."
+python manage.py makemigrations pedidos
+echo ====================================
+
 echo "Starting Migrations..."
 python manage.py migrate
 echo ====================================
