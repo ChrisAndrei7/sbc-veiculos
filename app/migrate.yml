@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: django-job-container
-        image: django-postgresql
+        image: app-djangoapp:latest
         imagePullPolicy: IfNotPresent
         command: ["bash", "-e", "./django.sh"]
         env:
