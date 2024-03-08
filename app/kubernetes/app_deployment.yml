@@ -61,3 +61,6 @@ spec:
     #   - name: postgres-pv
     #     persistentVolumeClaim:
     #       claimName: postgres-pvc
+        resources:
+          requests:
+            cpu: 1m
