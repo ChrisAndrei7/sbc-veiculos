@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'infrastructure',
     'infrastructure.gateway',
     'infrastructure.config',
+    'project',
 ]
 
 MIDDLEWARE = [
