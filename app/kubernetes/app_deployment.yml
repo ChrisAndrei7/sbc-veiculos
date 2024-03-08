@@ -53,14 +53,13 @@ spec:
             configMapKeyRef:
               name: app-variables
               key: DB_PORT
-    #     volumeMounts:
-    #        - name: postgres-volume-mount
-    #          mountPath: /var/lib/busybox
-
-    #  volumes:
-    #   - name: postgres-pv
-    #     persistentVolumeClaim:
-    #       claimName: postgres-pvc
         resources:
           requests:
-            cpu: 1m
+            cpu: 100m
+#        volumeMounts:
+#        - name: postgres-volume-mount
+#          mountPath: /var/lib/postgresql/data
+#      volumes:
+#        - name: postgres-pv
+#          persistentVolumeClaim:
+#            claimName: postgres-pvc
