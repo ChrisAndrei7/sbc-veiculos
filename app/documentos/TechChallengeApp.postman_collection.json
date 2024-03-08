@@ -5,7 +5,7 @@
 		"description": "Projeto criado para atender a demanda de uma lanchonete através de um sistema de autoatendimento.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "33097875",
-		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-e9fa077f-5c6b-4932-be61-30584f1f086a?action=share&source=collection_link&creator=33097875"
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/My-Workspace~bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-e9fa077f-5c6b-4932-be61-30584f1f086a?action=share&source=collection_link&creator=33097875"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/users",
+						"url": "localhost:31000/users",
 						"description": "API para consultar usuarios cadastrados, não é necessário informar nada no body."
 					},
 					"response": []
@@ -28,14 +28,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ch teste b\",\r\n    \"email\": \"b@b.com.br\",\r\n    \"cpf\": \"222222\"\r\n}",
+							"raw": "{\r\n    \"name\": \"ch teste b\",\r\n    \"email\": \"b@a.com.br\",\r\n    \"cpf\": \"222\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/users/create",
+						"url": "localhost:31000/users/create",
 						"description": "API para cadastrar novos usuários, necessário informar os 3 dados abaixo:\n\n- nome\n- email\n- cpf"
 					},
 					"response": []
@@ -54,7 +54,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/users/update/1",
+						"url": "localhost:31000/users/update/1",
 						"description": "API para atualizar usuários cadastrados, necessário informar os 4 dados abaixo:\n\n- id\n- nome\n- email\n- cpf"
 					},
 					"response": []
@@ -73,7 +73,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/users/delete/1",
+						"url": "localhost:31000/users/delete/1",
 						"description": "API para deletar um usuário cadastrado, necessário informar o id do usuário no endpoint."
 					},
 					"response": []
@@ -95,7 +95,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/users/read/1",
+						"url": "localhost:31000/users/read/1",
 						"description": "API para consultar usuarios cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
 					},
 					"response": []
@@ -117,7 +117,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/users/readcpf/222222",
+						"url": "localhost:31000/users/readcpf/222222",
 						"description": "API para consultar usuarios cadastrados, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
 					},
 					"response": []
@@ -133,7 +133,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/produtos",
+						"url": "localhost:31000/produtos",
 						"description": "API para consultar produtos cadastrados, não é necessário informar nada no body."
 					},
 					"response": []
@@ -145,14 +145,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"nome\": \"Batata frita pequena\",\r\n        \"descricao\": \"Batata frita\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
+							"raw": "{\r\n        \"nome\": \"Batata p\",\r\n        \"descricao\": \"Batata frita pequena\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/produtos/create",
+						"url": "localhost:31000/produtos/create",
 						"description": "API para criar novos produtos. Necessário informar os 5 campos abaixo:\n\n- nome\n- descricao\n- ingredientes\n- categoria\n- preco"
 					},
 					"response": []
@@ -171,7 +171,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/produtos/update/2",
+						"url": "localhost:31000/produtos/update/2",
 						"description": "API para atualização de produtos cadastrados, necessário informar os 6 dados abaixo:\n\n- id\n- nome\n- descricao\n- ingredientes\n- categoria\n- preco"
 					},
 					"response": []
@@ -181,7 +181,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8000/produtos/delete/2",
+						"url": "localhost:31000/produtos/delete/2",
 						"description": "API para deletar um produto cadastrado, necessário informar o id do produto no endpoint."
 					},
 					"response": []
@@ -203,7 +203,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/produtos/read/1",
+						"url": "localhost:31000/produtos/read/1",
 						"description": "API para consultar produtos cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
 					},
 					"response": []
@@ -225,7 +225,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/produtos/readcategoria/Lanches",
+						"url": "localhost:31000/produtos/readcategoria/Lanches",
 						"description": "API para consultar categorias cadastradas para os produtos. Necessário informar o nome da categoria no final do endpoint."
 					},
 					"response": []
@@ -241,7 +241,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/pedidos",
+						"url": "localhost:31000/pedidos/",
 						"description": "API para consultar pedidos cadastrados, não é necessário informar nada no body."
 					},
 					"response": []
@@ -253,15 +253,15 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"quantidade\": \"1\",\r\n        \"pruduto_id\": \"1\",\r\n        \"cliente_id\": \"1\",\r\n        \"descricao\": \"lanche completo\",\r\n        \"status\": \"Recebido\"\r\n}",
+							"raw": "{\r\n        \"valor\": \"11\",\r\n        \"quantidade\": \"1\",\r\n        \"produto_id\": \"1\",\r\n        \"cliente_id\": \"1\",\r\n        \"descricao\": \"Lanches\",\r\n        \"status\": \"RECEBIDO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/pedidos/create",
-						"description": "API para criar novos produtos. Necessário informar os 5 campos abaixo:\n\n- quantidade\n- pruduto_id\n    \n- cliente_id\n- descricao\n- status"
+						"url": "localhost:31000/pedidos/create",
+						"description": "API para criar novos produtos. Necessário informar os 6 campos abaixo:\n\n- valor\n- quantidade\n- produto_id\n- cliente_id\n- descricao\n- status"
 					},
 					"response": []
 				},
@@ -272,15 +272,15 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"quantidade\": 1,\r\n    \"pruduto_id\": 1,\r\n    \"cliente_id\": 1,\r\n    \"descricao\": \"lanche completo\",\r\n    \"status\": \"EM_PREPARACAO\"\r\n}",
+							"raw": "{\r\n    \"quantidade\": 1,\r\n    \"produto_id\": 2,\r\n    \"cliente_id\": 3,\r\n    \"descricao\": \"Acompanhamentos\",\r\n    \"status\": \"EM_PREPARACAO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/pedidos/update/1",
-						"description": "API para atualização do pedido, necessário informar os 6 dados abaixo:\n\n- id\n    \n- quantidade\n    \n- pruduto_id\n    \n- cliente_id\n    \n- descricao\n    \n- status"
+						"url": "localhost:31000/pedidos/update/6",
+						"description": "API para atualização do pedido, necessário informar os 7 dados abaixo:\n\n- id\n    \n- valor\n    \n- quantidade\n- pruduto_id\n- cliente_id\n- descricao\n- status"
 					},
 					"response": []
 				},
@@ -289,7 +289,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8000/pedidos/delete/2",
+						"url": "localhost:31000/pedidos/delete/2",
 						"description": "API para deletar um pedido. Necessário informar o id no final do endpoint."
 					},
 					"response": []
@@ -299,7 +299,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/pedidos/read/1",
+						"url": "localhost:31000/pedidos/read/1",
 						"description": "API para consultar pedidos cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
 					},
 					"response": []
@@ -321,13 +321,89 @@
 								}
 							}
 						},
-						"url": "localhost:8000/pedidos/readporstatus/Recebido",
+						"url": "localhost:31000/pedidos/readporstatus/RECEBIDO",
 						"description": "API para consultar pedidos por status. Necessário informar o status no final do endpoint para retornar pedidos."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar detalhe pedido",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:31000/pedidos/read/2",
+						"description": "API para consultar detalhes do pedido, informar ID do mesmo no endpoint."
 					},
 					"response": []
 				}
 			],
 			"description": "APIs relacionadas aos pedidos criados para a lanchonete."
+		},
+		{
+			"name": "Pagamentos",
+			"item": [
+				{
+					"name": "Consultar pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:31000/pagamentos/",
+						"description": "API para consultar pagamentos dos pedidos, não é necessário informar nada no body."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar pagamentos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"pedido_id\": \"1\",\r\n        \"status\": \"PAGO\",\r\n        \"valor\": \"11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:31000/pagamentos/create",
+						"description": "API para criar novos produtos. Necessário informar os 3 campos abaixo:\n\n- pedido_id\n    \n- status\n    \n- valor"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pagamento pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:31000/pagamentos/1",
+						"description": "API para consultar dados do pagamento do pedido, filtrando pelo id. Necessário informar o id do pagamento no final do endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pagamento por status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:31000/pagamentos/PAGO",
+						"description": "API para consultar pagamentos por status. Necessário informar o status no final do endpoint para retornar pagamentos."
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
