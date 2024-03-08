@@ -5,7 +5,7 @@ Bem-vindo ao Sistema de Pedidos para Lanchonete! Este projeto foi desenvolvido c
 <br/>
 
 # :computer: Endpoint base da aplicação
-http://localhost:8080/
+http://localhost:31000/
 <br/>
 <br/>
 
@@ -31,17 +31,17 @@ o atendente e a cozinha, atualizando o status do pedido e sendo enviado para o m
 # :arrow_forward: Uso 
 Abaixo, fluxo principal com processo e endpoint. Para maior detalhe dos campos, temos em anexo o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
 
-1 - Criar o usuário: http://localhost:8000/users/create
+1 - Criar o usuário: http://localhost:31000/users/create
 
-2 - Consultar usuário criado: http://localhost:8000/users
+2 - Consultar usuário criado: http://localhost:31000/users
 
-3 - Criar o produto: http://localhost:8000/produtos/create
+3 - Criar o produto: http://localhost:31000/produtos/create
 
-4 - Consultar produto criado: http://localhost:8000/produtos
+4 - Consultar produto criado: http://localhost:31000/produtos
 
-5 - Criar o pedido: http://localhost:8000/pedidos/create
+5 - Criar o pedido: http://localhost:31000/pedidos/create
 
-6 - Consultar pedido criado: http://localhost:8000/pedidos
+6 - Consultar pedido criado: http://localhost:31000/pedidos
 <br/>
 <br/>
 
