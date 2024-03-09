@@ -5,7 +5,7 @@
 		"description": "Projeto criado para atender a demanda de uma lanchonete através de um sistema de autoatendimento.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "33097875",
-		"_collection_link": "https://winter-desert-869279.postman.co/workspace/My-Workspace~bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-e9fa077f-5c6b-4932-be61-30584f1f086a?action=share&source=collection_link&creator=33097875"
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-e9fa077f-5c6b-4932-be61-30584f1f086a?action=share&source=collection_link&creator=33097875"
 	},
 	"item": [
 		{
@@ -13,6 +13,17 @@
 			"item": [
 				{
 					"name": "Consultar usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -28,7 +39,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ch teste b\",\r\n    \"email\": \"b@a.com.br\",\r\n    \"cpf\": \"222\"\r\n}",
+							"raw": "{\r\n    \"name\": \"usuario da silva\",\r\n    \"email\": \"a@a.com.br\",\r\n    \"cpf\": \"69243299000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -145,7 +156,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"nome\": \"Batata p\",\r\n        \"descricao\": \"Batata frita pequena\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
+							"raw": "{\r\n        \"nome\": \"Batata pequena\",\r\n        \"descricao\": \"Batata frita pequena\",\r\n        \"ingredientes\": \"Batata, sal\",\r\n        \"categoria\": \"Acompanhamentos\",\r\n        \"preco\": 10.49\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -253,7 +264,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"valor\": \"11\",\r\n        \"quantidade\": \"1\",\r\n        \"produto_id\": \"1\",\r\n        \"cliente_id\": \"1\",\r\n        \"descricao\": \"Lanches\",\r\n        \"status\": \"RECEBIDO\"\r\n}",
+							"raw": "{\r\n        \"valor\": \"10.49\",\r\n        \"quantidade\": \"1\",\r\n        \"produto_id\": \"1\",\r\n        \"cliente_id\": \"1\",\r\n        \"descricao\": \"Acompanhamentos\",\r\n        \"status\": \"RECEBIDO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -371,7 +382,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"pedido_id\": \"1\",\r\n        \"status\": \"PAGO\",\r\n        \"valor\": \"11\"\r\n}",
+							"raw": "{\r\n        \"pedido_id\": \"1\",\r\n        \"status\": \"PAGO\",\r\n        \"valor\": \"10.49\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
