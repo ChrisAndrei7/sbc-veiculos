@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # application definition
 
 INSTALLED_APPS = [
+    'infrastructure.config.pagamentosapps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +49,6 @@ INSTALLED_APPS = [
     'infrastructure',
     'infrastructure.gateway',
     'infrastructure.config',
-    'project',
 ]
 
 MIDDLEWARE = [
