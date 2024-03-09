@@ -10,14 +10,21 @@ http://localhost:31000/
 <br/>
 
 # :hammer: Subida da aplicação
-#### Subida docker:
-1. Entre no diretório do projeto: `cd app`
-2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
-3. Efetue a criação da aplicação: `docker compose build`
-4. Efetue a subida da aplicação: `docker compose up`
+### Subida completa da aplicação, seguir os 2 procedimentos(`docker e kubernetes`) apenas se for a primeira vez, a subida docker é necessária apenas para carregar image da aplicação django. Caso já tenha efetuado a subida em outro momento, seguir passos apenas da segunda parte(Kubernetes).
 <br/>
 
-#### Subida kubernetes(Após desligar docker):
+#### - Subida docker:
+1. Entre no diretório do projeto: `cd app`
+2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
+3. Efetue a criação da aplicação: `docker compose build`                                                                                                                                                                                                                                                     
+      <b>Nota Importante:
+      Ao realizar a primeira inicialização, ocasionalmente pode ocorrer o erro "No installed app with label 'pagamentos'". Como solução temporária, sugerimos a seguinte abordagem: caso o erro mencionado ocorra na primeira subida, modifique o arquivo "django.sh" na linha       3, substituindo "pagamentos" por "pedidos".</b>
+5. Efetue a subida da aplicação: `docker compose up`
+<br/>
+
+<b>=================================== Parar aplicação do docker ===================================</b>
+
+#### - Subida kubernetes(Após desligar docker):
 1. Subir a secret: `kubectl apply -f app/kubernetes/secret.yml`
 2. Subir o configmap: `kubectl create -f app/kubernetes/config_map.yml`
 3. Subir o deployment do banco de dados: `kubectl apply -f app/kubernetes/db_deployment.yml`
@@ -28,6 +35,9 @@ http://localhost:31000/
 8. Subir HPA para escalabilidade:`kubectl apply -f app/kubernetes/hpa.yml`
 <br/>
 
+<b>Video explicativo: 
+<br/>
+  
 # :arrow_forward: Uso 
 Abaixo, fluxo principal com processo e endpoint. Para maior detalhe dos campos, temos em anexo o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
 
