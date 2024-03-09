@@ -1,10 +1,10 @@
 #!/bin/bash
-echo "Starting Migrations..."
-python manage.py migrate
+echo "Creating Migrations..."
+python manage.py makemigrations application
 echo ====================================
 
-echo "Creating Migrations..."
-python manage.py makemigrations pagamentos
+echo "Starting Migrations..."
+python manage.py migrate
 echo ====================================
 
 echo "Starting Server..."
