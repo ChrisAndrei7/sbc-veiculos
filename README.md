@@ -1,7 +1,7 @@
-<h1 align="center"> Sistema de pedidos para lanches </h1>
-Bem-vindo ao Sistema de Pedidos para Lanchonete! Este projeto foi desenvolvido como parte do Tech Challenge para fase 1.	
-
-> :construction: Projeto em construção :construction:
+<h1 align="center"> TCFoodSystem - Sistema de pedidos para lanches </h1>
+Bem-vindo ao Sistema de Pedidos para Lanchonete! Este projeto está em desenvolvido como atividade do Tech Challenge para a FIAP, curso Software Architecture.	
+<br/>
+:construction: Projeto em construção :construction:
 <br/>
 
 # :computer: Endpoint base da aplicação
@@ -10,11 +10,22 @@ http://localhost:31000/
 <br/>
 
 # :hammer: Subida da aplicação
-
+#### Subida docker:
 1. Entre no diretório do projeto: `cd app`
 2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
 3. Efetue a criação da aplicação: `docker compose build`
 4. Efetue a subida da aplicação: `docker compose up`
+<br/>
+
+#### Subida kubernetes(Após desligar docker):
+1. Subir a secret: `kubectl apply -f app/kubernetes/secret.yml`
+2. Subir o configmap: `kubectl create -f app/kubernetes/config_map.yml`
+3. Subir o deployment do banco de dados: `kubectl apply -f app/kubernetes/db_deployment.yml`
+4. Subir o service do banco de dados: `kubectl apply -f app/kubernetes/db_service.yml`
+5. Subir o deployment da aplicação: `kubectl apply -f app/kubernetes/app_deployment.yml`
+6. Subir o service da aplicação: `kubectl apply -f app/kubernetes/app_service.yml`
+7. Subir as métricas para escalabilidade: `kubectl apply -f app/kubernetes/metrics.yml`
+8. Subir HPA para escalabilidade:`kubectl apply -f app/kubernetes/hpa.yml`
 <br/>
 
 # :arrow_forward: Uso 
@@ -56,3 +67,18 @@ Arquivo `TechChallengeApp.postman_collection` em anexo dentro da pasta `app > do
 
 # Desenhos arquitetura
 Foram disponibilizados também os desenhos de arquitetura, `requisitos de infraestrutura` e `requisitos do negocio`. Ambos estão com seus respectivos títulos no formato PNG dentro da pasta `app > documentos`.
+<br/>
+<br/>
+
+# :hammer: Parar aplicação
+Para efetuar a parada total da aplicação, e deletar todos os inclusos na subida, seguir passos abaixo:
+
+1. `kubectl delete deployment postgres-deployment`
+2. `kubectl delete deployment django-postgre-deploy`
+3. `kubectl delete service django-service`
+4. `kubectl delete service db`
+5. `kubectl delete ConfigMap app-variables`
+6. `kubectl delete secret postgres-credentials`
+7. `kubectl delete persistentvolumeclaim postgres-pvc`
+8. `kubectl delete -f app/kubernetes/metrics.yml`
+9. `kubectl delete hpa tcfoodsystem-hpa`
