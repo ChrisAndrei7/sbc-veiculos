@@ -9,23 +9,12 @@ http://localhost:31000/
 <br/>
 <br/>
 
-
 # :hammer: Subida da aplicação
 
 1. Entre no diretório do projeto: `cd app`
 2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
 3. Efetue a criação da aplicação: `docker compose build`
 4. Efetue a subida da aplicação: `docker compose up`
-<br/>
-
-# :warning: DDD
-O arquivo referente ao Domain driven design encontra-se em anexo, com título `DDD Fase 1 - Tech Challenge`, dentro da pasta `app > documentos`. Deixamos 2 opções para visualização, imagens para visualizar estaticamente, e as versões .eng para visualizar como editável.
-Criamos pelo site Egon.io, por favor, utilizar a última versão, link abaixo:
-https://egon.io/app-latest/
-
-Foi separado em 2 partes conforme solicitado, a primeira simulando a interação entre o cliente e o sistema, e a segunda detém a maior parte focada na interação entre 
-o atendente e a cozinha, atualizando o status do pedido e sendo enviado para o monitor.
-<br/>
 <br/>
 
 # :arrow_forward: Uso 
@@ -42,10 +31,28 @@ Abaixo, fluxo principal com processo e endpoint. Para maior detalhe dos campos, 
 5 - Criar o pedido: http://localhost:31000/pedidos/create
 
 6 - Consultar pedido criado: http://localhost:31000/pedidos
+
+7 - Criar o pagamento: http://localhost:31000/pagamentos/create
+
+8 - Consultar pagamento criado: http://localhost:31000/pagamentos/
 <br/>
 <br/>
 
-# :warning: Collection
+# :warning: Documentação
+Os documentos se encontram dentro da pasta `app > documentos`.
+
+# DDD
+O arquivo referente ao Domain driven design encontra-se em anexo, com título `DDD Fase 1 - Tech Challenge`, dentro da pasta `app > documentos`. Deixamos 2 opções para visualização, imagens para visualizar estaticamente, e as versões .eng para visualizar como editável.
+Criamos pelo site Egon.io, por favor, utilizar a última versão, link abaixo:
+https://egon.io/app-latest/
+
+Foi separado em 2 partes conforme solicitado, a primeira simulando a interação entre o cliente e o sistema, e a segunda detém a maior parte focada na interação entre 
+o atendente e a cozinha, atualizando o status do pedido e sendo enviado para o monitor.
+
+# Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs da aplicação e com os campos necessários para preenchimento. 
 
 Arquivo `TechChallengeApp.postman_collection` em anexo dentro da pasta `app > documentos`.
+
+# Desenhos arquitetura
+Foram disponibilizados também os desenhos de arquitetura, `requisitos de infraestrutura` e `requisitos do negocio`. Ambos estão com seus respectivos títulos no formato PNG dentro da pasta `app > documentos`.
