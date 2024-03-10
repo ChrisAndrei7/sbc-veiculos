@@ -35,7 +35,7 @@ http://localhost:31000/
 8. Subir HPA para escalabilidade:`kubectl apply -f app/kubernetes/hpa.yml`
 <br/>
 
-<b>Video explicativo: 
+<b>Video explicativo: https://www.youtube.com/watch?v=Dq_JQejMNWk
 <br/>
   
 # :arrow_forward: Uso 
