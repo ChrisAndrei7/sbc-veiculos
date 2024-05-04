@@ -35,3 +35,7 @@ jobs:
             distribution: 'adopt'
             package: '*.jar'
         - name: Publish package
+          run: pip install -r app/project/requirements.txt
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
