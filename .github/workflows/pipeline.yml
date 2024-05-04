@@ -39,7 +39,7 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-  unit-test:
+  test:
     runs-on: ubuntu-latest
     
     steps:
@@ -47,4 +47,4 @@ jobs:
       with:
         fetch-depth: 0
       
-    - run: http://localhost:8000/users/
+    - run: app/project/tests/usuariotestes.py
