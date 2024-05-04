@@ -10,7 +10,7 @@ http://localhost:31000/
 <br/>
 
 # :hammer: Subida da aplicação
-### Subida completa da aplicação, seguir os 2 procedimentos(`docker e kubernetes`) apenas se for a primeira vez, a subida docker é necessária apenas para carregar image da aplicação django. Caso já tenha efetuado a subida em outro momento, seguir passos apenas da segunda parte(Kubernetes).
+### Subida completa da aplicação, seguir os 2 procedimentos(`docker e kubernetes`) apenas se for a primeira vez, a subida docker é necessária apenas para carregar imagem da aplicação django. Caso já tenha efetuado a subida em outro momento, seguir passos apenas da segunda parte(Kubernetes).
 <br/>
 
 #### - Subida docker:
