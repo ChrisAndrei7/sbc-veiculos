@@ -8,4 +8,4 @@ python manage.py migrate
 echo ====================================
 
 echo "Starting Server..."
-python manage.py runserver ec2-54-198-132-244.compute-1.amazonaws.com:8000
+python manage.py runserver 0.0.0.0:8000
