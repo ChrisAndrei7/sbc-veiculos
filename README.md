@@ -13,7 +13,7 @@ http://localhost:31000/
 ### Subida completa da aplicação, seguir os 2 procedimentos(`docker e kubernetes`) apenas se for a primeira vez, a subida docker é necessária apenas para carregar imagem da aplicação django. Caso já tenha efetuado a subida em outro momento, seguir passos apenas da segunda parte(Kubernetes).
 <br/>
 
-#### - Subida docker:
+#### - Subida pelo docker:
 1. Entre no diretório do projeto: `cd app`
 2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
 3. Efetue a criação da aplicação: `docker compose build`                                                                                                                                                                                                                                                     
