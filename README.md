@@ -22,7 +22,7 @@ http://localhost:31000/
 4. Efetue a subida da aplicação: `docker compose up`
 <br/>
 
-<b>============ Parar aplicação do docker ============</b>
+<b>============ Parar aplicação no docker ============</b>
 
 #### - Subida kubernetes(Após desligar docker):
 1. Subir a secret: `kubectl apply -f app/kubernetes/secret.yml`
