@@ -13,7 +13,7 @@ http://localhost:31000/
 ### Subida completa da aplicação, seguir os 2 procedimentos(`docker e kubernetes`) apenas se for a primeira vez, a subida docker é necessária apenas para carregar imagem da aplicação django. Caso já tenha efetuado a subida em outro momento, seguir passos apenas da segunda parte(Kubernetes).
 <br/>
 
-#### - Subida docker:
+#### - Subida pelo docker:
 1. Entre no diretório do projeto: `cd app`
 2. Efetue a criação/subida do banco de dados: `docker compose up -d db`
 3. Efetue a criação da aplicação: `docker compose build`                                                                                                                                                                                                                                                     
@@ -22,7 +22,7 @@ http://localhost:31000/
 4. Efetue a subida da aplicação: `docker compose up`
 <br/>
 
-<b>============ Parar aplicação do docker ============</b>
+<b>============ Parar aplicação no docker ============</b>
 
 #### - Subida kubernetes(Após desligar docker):
 1. Subir a secret: `kubectl apply -f app/kubernetes/secret.yml`
