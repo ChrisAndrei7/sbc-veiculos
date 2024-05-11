@@ -15,7 +15,7 @@ http://localhost:31000/
 
 #### - Subida docker:
 1. Entre no diretório do projeto: `cd app`
-2. Efetue a criação/subida do banco de dados: `docker-compose up -d db`
+2. Efetue a criação/subida do banco de dados: `docker compose up -d db`
 3. Efetue a criação da aplicação: `docker compose build`                                                                                                                                                                                                                                                     
       <b>Nota Importante:
       Ao realizar a primeira inicialização, ocasionalmente pode ocorrer o erro "No installed app with label 'pagamentos'". Como solução temporária, sugerimos a seguinte abordagem: caso o erro mencionado ocorra na primeira subida, modifique o arquivo "django.sh" na linha       3, substituindo "pagamentos" por "pedidos" e efetue novamente o passo 3 antes de seguir para o passo 4.</b>
