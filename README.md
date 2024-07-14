@@ -34,5 +34,11 @@ Abaixo, fluxos principais com processo e endpoint desse microsserviço. Para mai
 
 4 - Deletar pagamento: http://localhost:8004/usuarios/delete/{id_do_usuario}
 
-# Collection
+# :page_with_curl: Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento. 
+
+# :test_tube: Testes
+Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
+OBS: BDD está dentro do arquivo "usuarios.feature"
+
+#### behave appUsuarios/project/features/usuarios.feature
