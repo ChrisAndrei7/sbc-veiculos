@@ -47,7 +47,11 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+    - name: install behave
+      run:
+          pip install behave
     - name: Teste
-      run: 
+      run:
+          #COMANDO OK > behave appUsuarios/project/features/usuarios.feature
           python -m pip install --upgrade pip
           pip debug -r appUsuarios/project/requirements.txt
