@@ -47,7 +47,7 @@ Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promov
       
       2. Pagamento_criado
       
-      3. pagamento_confirmado
+      3. Pagamento_confirmado
 
 Para acompanhar filas, acessar o rabbitMQ com aplicação no ar:
 
