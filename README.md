@@ -37,6 +37,12 @@ Abaixo, fluxos principais com processo e endpoint desse microsserviço. Para mai
 # :page_with_curl: Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento. 
 
+# :dancer: Padrão Saga - Coreografia
+### Justificativa da Escolha do Padrão Saga - Coreografia
+Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promover **descentralização** e **autonomia** entre microserviços. Nesse padrão, cada serviço reage a eventos relevantes de forma assíncrona, evitando a necessidade de um orquestrador central. Isso proporciona **menor acoplamento**, melhora a **escalabilidade** e facilita a **evolução e manutenção** do sistema, já que cada serviço pode ser desenvolvido e atualizado de forma independente, sem impactar os demais. Abaixo, arquitetura demonstrado coreografia:
+
+![Arquitetura_Saga_Coreografia drawio](https://github.com/user-attachments/assets/7981e294-3f45-4d4d-b2bd-ed785d0b1fbd)
+
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
 OBS: BDD está dentro do arquivo "usuarios.feature"
