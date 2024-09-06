@@ -5,7 +5,7 @@
 		"description": "Projeto criado para atender a demanda de uma lanchonete através de um sistema de autoatendimento.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33097875",
-		"_collection_link": "https://winter-desert-869279.postman.co/workspace/My-Workspace~bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-d532f786-f826-400a-95a5-41b9ab56db75?action=share&source=collection_link&creator=33097875"
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-d532f786-f826-400a-95a5-41b9ab56db75?action=share&source=collection_link&creator=33097875"
 	},
 	"item": [
 		{
@@ -179,7 +179,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/users/readcpf/222222222",
+					"raw": "localhost:8004/users/readcpf/7777777777",
 					"host": [
 						"localhost"
 					],
@@ -187,7 +187,7 @@
 					"path": [
 						"users",
 						"readcpf",
-						"222222222"
+						"7777777777"
 					]
 				},
 				"description": "API para consultar usuarios cadastrados, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
