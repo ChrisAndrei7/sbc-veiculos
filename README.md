@@ -59,7 +59,8 @@ Para acompanhar filas, acessar o rabbitMQ com aplicação no ar:
 
 Abaixo, demonstrando arquitetura coreografada:
 
-![Arquitetura_Saga_Coreografia drawio](https://github.com/user-attachments/assets/7981e294-3f45-4d4d-b2bd-ed785d0b1fbd)
+![Arquitetura_Saga_Coreografada drawio](https://github.com/user-attachments/assets/81398c8d-ce4f-4308-b3fa-299275f6fe62)
+
 
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
