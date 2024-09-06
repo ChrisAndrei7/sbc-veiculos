@@ -43,11 +43,11 @@ Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promov
 
 **Foram desenvolvidas 3 filas:**
 
-      1. Pedido_Criado
+      1. pedido_criado
       
-      2. Pagamento_criado
+      2. pagamento_pendente
       
-      3. Pagamento_confirmado
+      3. pagamento_confirmado
 
 Para acompanhar filas, acessar o rabbitMQ com aplicação no ar:
 
