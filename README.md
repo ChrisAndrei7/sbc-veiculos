@@ -39,7 +39,25 @@ Disponibilizamos uma collection do postman para ajudar na utilização, contendo
 
 # :dancer: Padrão Saga - Coreografia
 ### Justificativa da Escolha do Padrão Saga - Coreografia
-Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promover **descentralização** e **autonomia** entre microserviços. Nesse padrão, cada serviço reage a eventos relevantes de forma assíncrona, evitando a necessidade de um orquestrador central. Isso proporciona **menor acoplamento**, melhora a **escalabilidade** e facilita a **evolução e manutenção** do sistema, já que cada serviço pode ser desenvolvido e atualizado de forma independente, sem impactar os demais. Abaixo, demonstrando arquitetura coreografada:
+Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promover **descentralização** e **autonomia** entre microserviços. Nesse padrão, cada serviço reage a eventos relevantes de forma assíncrona, evitando a necessidade de um orquestrador central. Isso proporciona **menor acoplamento**, melhora a **escalabilidade** e facilita a **evolução e manutenção** do sistema, já que cada serviço pode ser desenvolvido e atualizado de forma independente, sem impactar os demais. 
+
+**Foram desenvolvidas 3 filas:**
+
+      1. Pedido_Criado
+      
+      2. Pagamento_criado
+      
+      3. pagamento_confirmado
+
+Para acompanhar filas, acessar o rabbitMQ com aplicação no ar:
+
+**Link:** http://localhost:15672
+
+**User:** guest
+
+**Password:** guest
+
+Abaixo, demonstrando arquitetura coreografada:
 
 ![Arquitetura_Saga_Coreografia drawio](https://github.com/user-attachments/assets/7981e294-3f45-4d4d-b2bd-ed785d0b1fbd)
 
