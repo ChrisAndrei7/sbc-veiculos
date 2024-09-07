@@ -61,6 +61,8 @@ Abaixo, demonstrando arquitetura coreografada:
 
 ![Arquitetura_Saga_Coreografada drawio](https://github.com/user-attachments/assets/81398c8d-ce4f-4308-b3fa-299275f6fe62)
 
+# :lock: Relatório RIPD
+Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appUsuarios/Documentos**, com nome **TCFoodSystem - RIPD**.
 
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
