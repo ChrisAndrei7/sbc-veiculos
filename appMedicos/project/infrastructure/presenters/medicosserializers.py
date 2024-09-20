@@ -3,5 +3,5 @@ from entities.medicos.medicosmodels import Medico
 
 class MedicoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = Medico
         fields = '__all__'
