@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from entities.usuarios.usuariosmodels import User
+from entities.medicos.medicosmodels import Medico
 
-class UserSerializer(serializers.ModelSerializer):
+class MedicoSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'

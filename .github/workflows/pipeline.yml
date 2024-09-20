@@ -52,6 +52,6 @@ jobs:
           pip install behave
     - name: Teste
       run:
-          #COMANDO OK > behave appMedicos/project/features/usuarios.feature
+          #COMANDO OK > behave appMedicos/project/features/medicos.feature
           python -m pip install --upgrade pip
           pip debug -r appMedicos/project/requirements.txt

@@ -3,41 +3,45 @@ import requests
 
 BASE_URL = 'http://localhost:8004'
 
-@given('que eu tenho os detalhes do usuario')
+@given('que eu tenho os detalhes do Medico')
 def step_impl(context):
-    context.user_data = {
-        'name': 'usuario a',
+    context.medico_data = {
+        'name': 'Medico a',
+        'cpf': '74964674053',
+        'crm': '398877',
         'email': 'ba@ba.com.br',
-        'cpf': '9876543210',
+        'senha': 'pass!medico01@',
     }
 
-@given('que eu tenho os detalhes atualizados do usuario')
+@given('que eu tenho os detalhes atualizados do Medico')
 def step_impl(context):
-    context.updated_user_data = {
-        'name': 'usuario aZ',
+    context.updated_medico_data = {
+        'name': 'Medico aZ',
+        'cpf': '74964674053',
+        'crm': '398877',
         'email': 'baZ@baZ.com.br',
-        'cpf': '7777777777',
+        'senha': 'pass!medico01@',
     }
 
-@when('eu faço o cadastro de um usuario')
+@when('eu faço o cadastro de um Medico')
 def step_impl(context):
-    context.response = requests.post(f"{BASE_URL}/users/create", json=context.user_data)
+    context.response = requests.post(f"{BASE_URL}/medicos/create", json=context.medico_data)
 
-@when('eu faço uma atualização de um usuario')
+@when('eu faço uma atualização de um Medico')
 def step_impl(context):
-    context.response = requests.put(f"{BASE_URL}/users/update/1", json=context.updated_user_data)
+    context.response = requests.put(f"{BASE_URL}/medicos/update/1", json=context.updated_medico_data)
 
-@when('eu faço a consulta dos usuarios cadastros')
+@when('eu faço a consulta dos medicos cadastros')
 def step_impl(context):
-    context.response = requests.get(f"{BASE_URL}/users")
+    context.response = requests.get(f"{BASE_URL}/medicos")
 
-@when('eu faço a consulta de um usuario pelo CPF')
+@when('eu faço a consulta de um Medico pelo CPF')
 def step_impl(context):
-    context.response = requests.get(f"{BASE_URL}/users/readcpf/7777777777")
+    context.response = requests.get(f"{BASE_URL}/medicos/readcpf/74964674053")
 
-@when('eu faço a exclusão de um usuario')
+@when('eu faço a exclusão de um Medico')
 def step_impl(context):
-    context.response = requests.delete(f"{BASE_URL}/users/delete/1")
+    context.response = requests.delete(f"{BASE_URL}/medicos/delete/1")
 
 @then('eu devo receber uma resposta com o código de status 201')
 def step_impl(context):
