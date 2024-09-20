@@ -1,7 +1,7 @@
-<h1 align="center"> TCFoodSystem - Sistema de pedidos para lanches </h1>
-Bem-vindo ao Sistema de Pedidos para Lanchonete! Este projeto está em desenvolvimento como atividade do Tech Challenge para a FIAP, curso Software Architecture.	
+<h1 align="center"> H&MSystem - Sistema de agendamentos de consultas médicas </h1>
+Bem-vindo ao Sistema de agendamento para consultas da Health&Med! Este projeto está em desenvolvimento como atividade do hackaton para a FIAP, curso Software Architecture.	
 <br/>
-<b>Neste repositório, temos o microsserviço de usuarios</b>
+<b>Neste repositório, temos o microsserviço de cadastro dos médicos</b>
 <br/>
 :construction: Projeto em construção :construction:
 <br/>
@@ -15,61 +15,40 @@ http://localhost:8004/
 ### Subida completa da aplicação via docker:
 
 #### - Subida no docker:
-1. Entre no diretório do projeto: `cd appUsuarios`
-2. Efetue a criação/subida do banco de dados: `docker compose up -d dbUsuarios`
+1. Entre no diretório do projeto: `cd appMedicos`
+2. Efetue a criação/subida do banco de dados: `docker compose up -d dbMedicos`
 3. Efetue a criação da aplicação: `docker compose build`                                                                                                                                                                                                                                                     
       <b>Nota Importante:
-      Ao realizar a primeira inicialização, ocasionalmente pode ocorrer o erro "No installed app with label 'pagamentos'". Como solução temporária, sugerimos a seguinte abordagem: caso o erro mencionado ocorra na primeira subida, modifique o arquivo "django.sh" na linha       3, substituindo "usuarios" por "application" e efetue novamente o passo 3 antes de seguir para o passo 4.</b>
+      Ao realizar a primeira inicialização, ocasionalmente pode ocorrer o erro "No installed app with label 'medicos'". Como solução temporária, sugerimos a seguinte abordagem: caso o erro mencionado ocorra na primeira subida, modifique o arquivo "django.sh" na linha       3, substituindo "medicos" por "application" e efetue novamente o passo 3 antes de seguir para o passo 4.</b>
 4. Efetue a subida da aplicação: `docker compose up`
 <br/>
   
 # :arrow_forward: Uso 
-Abaixo, fluxos principais com processo e endpoint desse microsserviço. Para maior detalhe dos campos, temos no projeto(Na pasta appUsuarios/Documentos) o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
+Abaixo, fluxos principais com processo e endpoint desse microsserviço. Para maior detalhe dos campos, temos no projeto(Na pasta appMedicos/Documentos) o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
 
-1 - Criar o pagamento: http://localhost:8004/usuarios/create
+1 - Criar o cadastro de um médico: http://localhost:8004/medicos/create
 
-2 - Consultar pagamentos: http://localhost:8004/usuarios/
+2 - Consultar médicos cadastrados: http://localhost:8004/medicos/
 
-3 - Atualizar pagamento: http://localhost:8004/usuarios/update/{id_do_usuario}
+3 - Atualizar cadastro de um médico: http://localhost:8004/medicos/update/{id_do_medico}
 
-4 - Deletar pagamento: http://localhost:8004/usuarios/delete/{id_do_usuario}
+4 - Deletar o cadastro de um médico: http://localhost:8004/medicos/delete/{id_do_medico}
 
 # :page_with_curl: Collection
-Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento. 
+Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento, <b>localizado na pasta appMedicos/Documentos com nome "hk-medicos.postman_collection".</b>
 
 # :dancer: Padrão Saga - Coreografia
-### Justificativa da Escolha do Padrão Saga - Coreografia
-Optamos pelo **padrão Saga com coreografia** devido à sua capacidade de promover **descentralização** e **autonomia** entre microserviços. Nesse padrão, cada serviço reage a eventos relevantes de forma assíncrona, evitando a necessidade de um orquestrador central. Isso proporciona **menor acoplamento**, melhora a **escalabilidade** e facilita a **evolução e manutenção** do sistema, já que cada serviço pode ser desenvolvido e atualizado de forma independente, sem impactar os demais. 
-
-**Foram desenvolvidas 3 filas:**
-
-      1. pedido_criado
-      
-      2. pagamento_pendente
-      
-      3. pagamento_confirmado
-
-Para acompanhar filas, acessar o rabbitMQ com aplicação no ar:
-
-**Link:** http://localhost:15672
-
-**User:** guest
-
-**Password:** guest
-
-Abaixo, demonstrando arquitetura coreografada:
-
-![Arquitetura_Saga_Coreografada drawio](https://github.com/user-attachments/assets/81398c8d-ce4f-4308-b3fa-299275f6fe62)
+:construction: Em construção :construction:
 
 # :lock: Relatório RIPD
-Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appUsuarios/Documentos**, com nome **TCFoodSystem - RIPD**.
+Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appMedicos/Documentos**, com nome **TCFoodSystem - RIPD**.
 
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
-OBS: BDD está dentro do arquivo "usuarios.feature"
+OBS: BDD está dentro do arquivo "medicos.feature"
 
-#### behave appUsuarios/project/features/usuarios.feature
+#### behave appMedicos/project/features/medicos.feature
 
 # Evidência dos testes:
 
-![image](https://github.com/user-attachments/assets/9cd1eabb-3628-4f2c-aa83-425e035d4843)
+![image](![hk-medicos_test](https://github.com/user-attachments/assets/6a44a78b-61cb-4bdf-b416-a7027ff8ba5c)
