@@ -33,8 +33,8 @@ def addMedico(request):
 
 @api_view(['PUT'])
 def updateMedico(request, pk):
-    Medico = Medico.objects.get(id=pk)
-    serializer = MedicoSerializer(instance=Medico, data=request.data)
+    medico = Medico.objects.get(id=pk)
+    serializer = MedicoSerializer(instance=medico, data=request.data)
 
     if serializer.is_valid():
         serializer.save()
@@ -43,7 +43,7 @@ def updateMedico(request, pk):
 
 @api_view(['DELETE'])
 def deleteMedico(request, pk):
-    Medico = Medico.objects.get(id=pk)
-    Medico.delete()
+    medico = Medico.objects.get(id=pk)
+    medico.delete()
     return Response('Médico deletado com sucesso!')
 
