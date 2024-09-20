@@ -41,7 +41,7 @@ Disponibilizamos uma collection do postman para ajudar na utilização, contendo
 :construction: Em construção :construction:
 
 # :lock: Relatório RIPD
-Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appMedicos/Documentos**, com nome **TCFoodSystem - RIPD**.
+Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appMedicos/Documentos**, com nome **H&MSystem - RIPD**.
 
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
