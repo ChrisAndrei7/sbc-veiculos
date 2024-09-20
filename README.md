@@ -51,4 +51,4 @@ OBS: BDD está dentro do arquivo "medicos.feature"
 
 # Evidência dos testes:
 
-![image](![hk-medicos_test](https://github.com/user-attachments/assets/6a44a78b-61cb-4bdf-b416-a7027ff8ba5c)
+![image](https://github.com/user-attachments/assets/6a44a78b-61cb-4bdf-b416-a7027ff8ba5c)
