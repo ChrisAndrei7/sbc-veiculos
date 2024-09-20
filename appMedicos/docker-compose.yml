@@ -1,6 +1,6 @@
 services:
 
-  usuariosapp:
+  medicosapp:
     container_name: medicos
     build:
       context: .
@@ -16,7 +16,7 @@ services:
     depends_on:
       - dbMedicos
 
-  dbUsuarios:
+  dbMedicos:
     container_name: dbMedicos
     image: postgres:12
     environment:
