@@ -43,6 +43,9 @@ Disponibilizamos uma collection do postman para ajudar na utilização, contendo
 # :lock: Relatório RIPD
 Relatório RIPD gerado se encontra junto com todos os outros documentos do projeto dentro do projeto, na pasta pasta **appPacientes/Documentos**, com nome **H&MSystem - RIPD**.
 
+# :clipboard: Relatórios OWASP ZAP
+:construction: Em construção :construction:
+
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
 <br/>
