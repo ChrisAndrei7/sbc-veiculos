@@ -26,11 +26,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8004/pacientes",
+					"raw": "localhost:8003/pacientes",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes"
 					]
@@ -54,11 +54,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/pacientes/create",
+					"raw": "localhost:8003/pacientes/create",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes",
 						"create"
@@ -75,7 +75,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"2\",\r\n    \"name\": \"Primeiro Paciente\",\r\n    \"cpf\": \"06743138010\",\r\n    \"email\": \"ba@ba.com.br\",\r\n    \"senha\": \"1!paci@system\"\r\n}",
+					"raw": "{\r\n    \"id\": \"2\",\r\n    \"name\": \"Primeiro Paciente\",\r\n    \"cpf\": \"06743138010\",\r\n    \"email\": \"bz@bz.com.br\",\r\n    \"senha\": \"1!paci@system\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,11 +83,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/pacientes/update/1",
+					"raw": "localhost:8003/pacientes/update/1",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes",
 						"update",
@@ -113,11 +113,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/pacientes/delete/1",
+					"raw": "localhost:8003/pacientes/delete/1",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes",
 						"delete",
@@ -179,11 +179,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/pacientes/readcpf/06743138010",
+					"raw": "localhost:8003/pacientes/readcpf/06743138010",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes",
 						"readcpf",
