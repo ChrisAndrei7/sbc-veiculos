@@ -1,7 +1,7 @@
 from behave import given, when, then
 import requests
 
-BASE_URL = 'http://localhost:8004'
+BASE_URL = 'http://localhost:8003'
 
 @given('que eu tenho os detalhes do Paciente')
 def step_impl(context):
