@@ -5,7 +5,7 @@
 		"description": "Projeto criado para atender a demanda de uma operadora de saúde através de um sistema de agendamento de consultas.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33097875",
-		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-3a7e7192-90ad-4637-bdb9-cf77a0c224a4?action=share&source=collection_link&creator=33097875"
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/My-Workspace~bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-3a7e7192-90ad-4637-bdb9-cf77a0c224a4?action=share&source=collection_link&creator=33097875"
 	},
 	"item": [
 		{
@@ -99,36 +99,6 @@
 			"response": []
 		},
 		{
-			"name": "Deletar paciente",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8003/pacientes/delete/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8003",
-					"path": [
-						"pacientes",
-						"delete",
-						"1"
-					]
-				},
-				"description": "API para deletar um paciente cadastrado, necessário informar o id do usuário no endpoint."
-			},
-			"response": []
-		},
-		{
 			"name": "Consultar paciente pelo ID",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -146,11 +116,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8004/pacientes/read/1",
+					"raw": "localhost:8003/pacientes/read/1",
 					"host": [
 						"localhost"
 					],
-					"port": "8004",
+					"port": "8003",
 					"path": [
 						"pacientes",
 						"read",
@@ -191,6 +161,70 @@
 					]
 				},
 				"description": "API para consultar pacientes cadastrados, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar médicos disponiveis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/pacientes/readmed/10-12-2024/09:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"pacientes",
+						"readmed",
+						"10-12-2024",
+						"09:00"
+					]
+				},
+				"description": "API para consultar pacientes cadastrados, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar paciente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/pacientes/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"pacientes",
+						"delete",
+						"1"
+					]
+				},
+				"description": "API para deletar um paciente cadastrado, necessário informar o id do usuário no endpoint."
 			},
 			"response": []
 		}
