@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e7im26dbj!(m-)^a3#z5&5d($lrk3h+&)ckuk*&gw$@pzp!g8v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.196.81.55', 'ec2-54-196-81-55.compute-1.amazonaws.com', 'localhost']
+ALLOWED_HOSTS = ['54.196.81.55', 'ec2-54-196-81-55.compute-1.amazonaws.com', 'localhost', 'pacientes']
 
 
 # application definition
@@ -89,7 +89,7 @@ DATABASES = {
         'PASSWORD':os.environ.get('PG_PASSWORD','postgres'),
         'NAME': os.environ.get('PG_DB','postgres'),
         'PORT': os.environ.get('PG_PORT','5434'),
-        'HOST': os.environ.get('PG_HOST','localhost'), # uses the container if set, otherwise it runs locally
+        'HOST': os.environ.get('PG_HOST','dbPacientes'), # uses the container if set, otherwise it runs locally
     }
 }
 

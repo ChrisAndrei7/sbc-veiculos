@@ -1,5 +1,5 @@
+version: '3'
 services:
-
   pacientesapp:
     container_name: pacientes
     build:
@@ -15,6 +15,8 @@ services:
       - PG_HOST=dbPacientes
     depends_on:
       - dbPacientes
+    networks:
+      - app-network
 
   dbPacientes:
     container_name: dbPacientes
@@ -25,8 +27,9 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5434:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
 
-volumes:
-  pgdata: {}
+networks:
+  app-network:
+    external: true

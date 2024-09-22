@@ -8,4 +8,5 @@ urlpatterns = [
     path ('readcpf/<str:cpf>', pacientesviews.getPacienteCPF),
     path ('update/<str:pk>', pacientesviews.updatePaciente),
     path ('delete/<str:pk>', pacientesviews.deletePaciente),
+    path ('readmed/<str:data>/<str:horario>', pacientesviews.getMedicosDisponiveis),
 ]
