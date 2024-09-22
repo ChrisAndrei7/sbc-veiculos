@@ -51,7 +51,6 @@ def deletePaciente(request, pk):
     return Response('Paciente deletado com sucesso!')
 
 
-# Nova operação para buscar médicos disponíveis
 @api_view(['GET'])
 def getMedicosDisponiveis(request, data, horario):
     # Consultando MS de médicos para obter a lista de médicos cadastrados
@@ -68,15 +67,14 @@ def getMedicosDisponiveis(request, data, horario):
     # Consultando MS de agendamentos para verificar médicos ocupados na data e horário
     agendamentos_response = requests.get(f'http://agendamentos:8002/agendamentos/readdata/{data}')
 
-    if agendamentos_response.status_code != 200:
-        return Response({"erro": "Erro ao conectar com o serviço de agendamentos"}, status=500)
+    if agendamentos_response.status_code == 500:
+        # Se houver erro no serviço de agendamentos, retorna todos os médicos
+        return Response({'medicos_disponiveis': [medico['name'] for medico in medicos]})
 
     try:
         agendamentos = agendamentos_response.json()
     except ValueError:
         return Response({"erro": "Erro ao processar a resposta de agendamentos"}, status=500)
-
-    print(agendamentos)  # Log para depuração
 
     # Verificar se "agendamentos" é uma lista ou dicionário
     if isinstance(agendamentos, dict):  # Caso seja um único agendamento (dicionário)
