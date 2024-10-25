@@ -21,7 +21,7 @@ http://localhost:8004/
 <br/>
   
 # :arrow_forward: Uso 
-Abaixo, fluxos principais com processo e endpoint desse microsserviço. Para maior detalhe dos campos, temos no projeto(Na pasta appClientes/Documentos) o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
+Abaixo, fluxos principais com processo e endpoint deste microsserviço. Para maior detalhe dos campos, temos no projeto(Na pasta appClientes/Documentos) o arquivo do Postman com a collection estruturando todos as APIs com descrição e valores a serem informados no json.
 
 1 - Criar o cadastro de um cliente: http://localhost:8004/clientes/create
 
