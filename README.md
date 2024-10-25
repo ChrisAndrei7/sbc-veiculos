@@ -43,5 +43,4 @@ OBS: BDD está dentro do arquivo "clientes.feature"
 
 # Evidência dos testes:
 
-![image](![sbc-clientes_test](https://github.com/user-attachments/assets/2b8071e6-5111-47a1-a8da-c612bdc5032e)
-)
+![sbc-clientes_test](https://github.com/user-attachments/assets/2b8071e6-5111-47a1-a8da-c612bdc5032e)
