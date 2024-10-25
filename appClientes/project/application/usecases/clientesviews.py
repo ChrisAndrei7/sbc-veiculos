@@ -1,7 +1,7 @@
 import requests
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from entities.clientes.pacientesmodels import Cliente
+from entities.clientes.clientesmodels import Cliente
 from infrastructure.presenters.clientesserializers import ClienteSerializer
 
 
@@ -14,7 +14,7 @@ def getData(request):
 
 @api_view(['GET'])
 def getCliente(request, pk):
-    clientes = Cliente.objects.get(idCliente=pk)
+    clientes = Cliente.objects.get(id=pk)
     serializer = ClienteSerializer(clientes, many=False)
     return Response(serializer.data)
 
@@ -36,7 +36,7 @@ def addCliente(request):
 
 @api_view(['PUT'])
 def updateCliente(request, pk):
-    cliente = Cliente.objects.get(idCliente=pk)
+    cliente = Cliente.objects.get(id=pk)
     serializer = ClienteSerializer(instance=cliente, data=request.data)
 
     if serializer.is_valid():
@@ -46,6 +46,6 @@ def updateCliente(request, pk):
 
 @api_view(['DELETE'])
 def deleteCliente(request, pk):
-    cliente = Cliente.objects.get(idCliente=pk)
+    cliente = Cliente.objects.get(id=pk)
     cliente.delete()
     return Response('Cliente deletado com sucesso!')
