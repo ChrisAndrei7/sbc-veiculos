@@ -1,6 +1,6 @@
 version: '3'
 services:
-  appVeiculos:
+  veiculosapp:
     container_name: veiculos
     build:
       context: .
@@ -11,7 +11,7 @@ services:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
       - PG_DB=postgres
-      - PG_PORT=5434
+      - PG_PORT=5432
       - PG_HOST=dbVeiculos
     depends_on:
       - dbVeiculos
@@ -26,7 +26,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5434:5434"
+      - "5435:5432"
     networks:
       - app-network
 
