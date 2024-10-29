@@ -43,4 +43,5 @@ OBS: BDD está dentro do arquivo "veiculos.feature"
 
 # Evidência dos testes:
 
-#![sbc-veiculos_test](link xx)
+![sbc-veiculos_test](https://github.com/user-attachments/assets/2e50887f-8da8-4e93-8ba0-b04a6c9e177e)
+
