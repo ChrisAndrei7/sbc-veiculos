@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "a4665f1f-81a3-4d30-bea5-f80cfdd31c99",
+		"name": "sbc-veiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33097875",
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-a4665f1f-81a3-4d30-bea5-f80cfdd31c99?action=share&source=collection_link&creator=33097875"
+	},
+	"item": [
+		{
+			"name": "Consultar veiculos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/veiculos",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos"
+					]
+				},
+				"description": "API para consultar veiculos cadastrados, não é necessário informar nada no body."
+			},
+			"response": []
+		},
+		{
+			"name": "Criar veiculos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"veiculo\": \"Vectra\",\r\n    \"placa\": \"EFG-2B56\",\r\n    \"marca\": \"Chevrolet\",\r\n    \"modelo\": \"challenge-2-2-mpfi-16v\",\r\n    \"ano\": \"2002\",\r\n    \"cor\": \"Cinza\",\r\n    \"valor\": \"23.900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/veiculos/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos",
+						"create"
+					]
+				},
+				"description": "API para cadastrar novos veiculos, necessário informar os 7 dados abaixo:\n\n- veiculo\n    \n- placa\n    \n- marca\n    \n- modelo\n    \n- ano\n    \n- cor\n    \n- valor"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar veiculo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"veiculo\": \"Vectra\",\r\n    \"placa\": \"EFG-2B56\",\r\n    \"marca\": \"Chevrolet\",\r\n    \"modelo\": \"challenge-2-2-mpfi-16v\",\r\n    \"ano\": \"2002\",\r\n    \"cor\": \"Cinza\",\r\n    \"valor\": \"22.100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/veiculos/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos",
+						"update",
+						"1"
+					]
+				},
+				"description": "API para atualizar veiculos cadastrados, necessário informar os 7 dados abaixo e o ID do veiculo no final do endpoint:\n\n- veiculo\n    \n- placa\n    \n- marca\n    \n- modelo\n    \n- ano\n    \n- cor\n    \n- valor"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar veiculo pelo ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/veiculos/read/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos",
+						"read",
+						"1"
+					]
+				},
+				"description": "API para consultar veiculos cadastrados, filtrando pelo id. Necessário informar o id no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar veiculo pela placa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/veiculos/readplaca/EFG-2B56",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos",
+						"readplaca",
+						"EFG-2B56"
+					]
+				},
+				"description": "API para consultar veiculos cadastrados, filtrando pela placa. Necessário informar a placa no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar veiculo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/veiculos/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"veiculos",
+						"delete",
+						"1"
+					]
+				},
+				"description": "API para deletar um veiculo cadastrado, necessário informar o id do veiculo no endpoint."
+			},
+			"response": []
+		}
+	]
+}
