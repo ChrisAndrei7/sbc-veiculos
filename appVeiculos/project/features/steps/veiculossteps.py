@@ -41,7 +41,7 @@ def step_impl(context):
 
 @when('eu faço a consulta de um Veiculo pela placa')
 def step_impl(context):
-    context.response = requests.get(f"{BASE_URL}/veiculos/readplaca/X")
+    context.response = requests.get(f"{BASE_URL}/veiculos/readplaca/ABC-1A34")
 
 @when('eu faço a exclusão de um Veiculo')
 def step_impl(context):
